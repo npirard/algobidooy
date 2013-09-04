@@ -9,9 +9,17 @@ public class QuickFind {
 		QuickFind instance = new QuickFind(10);
 		
 		System.out.println(instance);
+		//8-5 8-6 3-9 8-4 4-0 1-2
+		instance.union(8, 5);
+		instance.union(8, 6);
+		instance.union(3, 9);
+		instance.union(8, 4);
+		instance.union(4, 0);
+		instance.union(1, 2);
+		System.out.println(instance);
 	}
 	
-	private int[] id;
+	int[] id;
 	
 	@Override
 	public String toString(){
@@ -49,7 +57,9 @@ public class QuickFind {
 		int idq = id[q];
 		int n = id.length;
 		for(int i = 0; i<n; i++){
-			if()
+			if(id[i] == idp){
+				id[i] = idq;
+			}
 		}
 	}
 }
