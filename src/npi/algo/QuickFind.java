@@ -1,6 +1,6 @@
 package npi.algo;
 
-public class QuickFind {
+public class QuickFind extends AbstractQuick {
 
 	/**
 	 * @param args
@@ -19,29 +19,8 @@ public class QuickFind {
 		System.out.println(instance);
 	}
 	
-	int[] id;
-	
-	@Override
-	public String toString(){
-		StringBuilder sb = new StringBuilder();
-		boolean first = true;
-		for (int cur : id) {
-			if(first){
-				first = false;
-			}
-			else{
-				sb.append(" ");
-			}
-			sb.append(cur);
-		}
-		return sb.toString();
-	}
-	
 	public QuickFind(int n){
-		id = new int[n];
-		for(int i=0;i<n;i++){
-			id[i] = i;
-		}
+		super(n);
 	}
 
 	public boolean connected(int p, int q){
